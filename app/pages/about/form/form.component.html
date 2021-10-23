@@ -1,0 +1,40 @@
+<div class="container">
+    <h1 class="title">¡Contáctanos!</h1>
+    <h3>Si necesitas cualquier tipo de información relacionada con Rick y Morty o puedes aportar nuevo contenido no dudes en comunicarte con nosotros</h3>
+  </div>
+  
+  <h2>Formulario de Contacto:</h2>
+  
+  
+  <form novalidate (ngSubmit)="onSubmit()" [formGroup]="userRegisterForm">
+      <fieldset>
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" formControlName="name" />
+      <div *ngIf="!userRegisterForm.get('name')?.valid &&
+          (userRegisterForm.get('name')?.dirty  || submitted)">
+        El nombre no es correcto.
+      </div>
+    </fieldset>
+      
+      <fieldset>
+      <label for="password">Password:</label>
+      <input type="password" id="password" formControlName="password" />
+      <div *ngIf="!userRegisterForm.get('password')?.valid &&
+          (userRegisterForm.get('password')?.dirty || submitted)">
+        Has introducido una contraseña incorrecta.
+      </div>
+    </fieldset>
+  
+      <fieldset>
+      <label for="passwordRepeat">Repeat password:</label>
+      <input type="password" id="passwordRepeat" formControlName="passwordRepeat" />
+      <div *ngIf="!userRegisterForm.get('passwordRepeat')?.valid &&
+          (userRegisterForm.get('passwordRepeat')?.dirty  || submitted)">
+        Tu contraseña no coincide.
+      </div>
+    </fieldset>
+  
+      <button type="submit" [disabled]="!userRegisterForm?.valid">Submit</button>
+  
+  </form>
+  

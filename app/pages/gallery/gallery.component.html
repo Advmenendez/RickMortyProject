@@ -1,0 +1,10 @@
+<div *ngIf="characterList">
+    <h3 class="title">Lista de Personajes</h3>
+    <div class="container" *ngFor="let character of characterList let index = index" >
+        <ul>
+        <li [routerLink]="['/character/' + character.id]">
+          <h4 >{{ character.name }}</h4>
+          <img [src]="character.image" [alt]="character.name">
+        </li>
+      </ul>
+    </div>

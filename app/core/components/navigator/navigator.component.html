@@ -1,0 +1,23 @@
+<div class="nav">
+<div class="nav-container">
+  <div role="button" class="button-nav" (click)="toggleActive()">
+      <ng-container *ngIf="!isActive">
+          <img class="imgOpen"  src="https://cdn-icons-png.flaticon.com/512/747/747496.png" alt="bars">
+      </ng-container>
+      <ng-container *ngIf="isActive">
+        <img class="imgClose" src="https://cdn-icons.flaticon.com/png/512/1008/premium/1008968.png?token=exp=1634917152~hmac=5765782a93351ecbc052b8e254a05639" alt="X">
+      </ng-container>
+  
+
+
+<nav class="nav-content" [ngClass]="{ 'nav-content--open' : isActive}">
+
+    <ul class="nav-content__list">
+      <li class="navigator-list__item" *ngFor="let element of navigator">
+        <a  class="a" routerLink="{{element.link}}"> {{element.name}}</a>
+      </li>
+    </ul>
+  </nav>
+  
+</div>
+</div>

@@ -1,0 +1,13 @@
+.home{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    h1{
+        text-align: center;
+        color: black;
+    }
+    img{
+        width: 500px;
+        align-self: center;
+    }
+}

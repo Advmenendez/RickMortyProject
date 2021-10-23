@@ -1,0 +1,12 @@
+<div *ngIf="episodesList">
+    <h3 class="title">Lista de Episodios</h3>
+    <div class="container" *ngFor="let episode of episodesList let index = index" >
+        <ul>
+        <li>
+            <h4>{{episode.episode}}</h4>
+            <h4 >{{ episode.name }}</h4>
+            <h4>Estreno: {{episode.air_date}}</h4>
+        </li>
+      </ul>
+</div>
+

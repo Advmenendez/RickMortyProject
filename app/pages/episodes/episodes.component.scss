@@ -1,0 +1,39 @@
+
+.title {
+    text-align: center;
+    font-size: 50px;
+  }
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    ul {
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      padding: 0;
+      text-align: center;
+      li {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        list-style-type: none;
+        background-image: url(https://arc-anglerfish-arc2-prod-copesa.s3.amazonaws.com/public/4J2OVXWKJNH5PBPK2M7CL5ZRPI.jpg);
+        width: 70%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        max-width: 900px;
+        height: 390px;
+        border: 2px black;
+        border-radius: 5px;
+        margin: 0 auto 30px auto;
+        padding: 15px 15px 40px;
+        cursor: pointer;
+        h4 {
+          display: block;
+          font-size: 1.5rem;
+          color: black;
+        }
+      }
+    }
+  }
+  
