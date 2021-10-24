@@ -13,9 +13,10 @@
       cursor: pointer;
       .imgOpen{
           width: 50px;
+          padding: 15px;
       }
       .imgClose{
-          width: 500px;
+          width: 50px;
       }
     }
   
@@ -30,13 +31,13 @@
         justify-content: center;
       }
   
-      &__list {
+      .nav-content__list {
         display: flex;
         align-items: center;
         flex-direction: row;
         justify-content: space-between;
         list-style: none;
-        &__item {
+        .navigator-list__item{
           display: flex;
           align-items: center;
           padding: 30px 10px 0;

@@ -1,0 +1,22 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    h1{
+        text-align: center;
+        color: black;
+        text-transform: uppercase;
+    }
+    h3{
+        text-align: center;
+        color: black;
+    }
+    h2{
+        text-align: center;
+        color: coral;
+    }
+    form{
+        text-align: center;
+        padding: 15px;
+        
+    }
+}
