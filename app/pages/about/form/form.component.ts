@@ -13,9 +13,9 @@ export class FormComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder) {
     this.userRegisterForm = this.formBuilder.group({
-      name: ['', [Validators.required, Validators.maxLength(20), Validators.minLength(4), Validators.pattern('[a-zA-Z ]*')]],
-      password: ['', [Validators.required, Validators.maxLength(20), Validators.minLength(8), Validators.pattern('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}')]],
-      passwordRepeat: ['', [Validators.required, Validators.maxLength(20), Validators.minLength(8), Validators.pattern('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z$@$!%*?&].{8,}')]],
+      name: ['', [Validators.required, Validators.maxLength(20), Validators.minLength(4), ]],
+      email: ['', [Validators.required, Validators.maxLength(20), Validators.minLength(8), ]],
+      tlf: ['', [Validators.required, Validators.maxLength(20), Validators.minLength(8), ]],
     });
  }
 
@@ -26,8 +26,8 @@ export class FormComponent implements OnInit {
     if (this.userRegisterForm.valid) {
       const user: UserRegister = {
         name: this.userRegisterForm.get('name')?.value,
-        password: this.userRegisterForm.get('password')?.value,
-        passwordRepeat: this.userRegisterForm.get('passwordRepeat')?.value,
+        email: this.userRegisterForm.get('email')?.value,
+        tlf: this.userRegisterForm.get('tlf')?.value,
       };
       console.log(user);
       this.userRegisterForm.reset();

@@ -22,32 +22,32 @@
     </fieldset>
 
     <fieldset>
-      <label for="password">Password:</label>
-      <input type="password" id="password" formControlName="password" />
+      <label for="email">Email:</label>
+      <input type="email" id="email" formControlName="email" />
       <div
         *ngIf="
-          !userRegisterForm.get('password')?.valid &&
-          (userRegisterForm.get('password')?.dirty || submitted)
+          !userRegisterForm.get('email')?.valid &&
+          (userRegisterForm.get('email')?.dirty || submitted)
         "
       >
-        Has introducido una contraseña incorrecta.
+        Has introducido un mail incorrecto.
       </div>
     </fieldset>
 
     <fieldset>
-      <label for="passwordRepeat">Repeat password:</label>
+      <label for="tlf">Tlf:</label>
       <input
         type="password"
-        id="passwordRepeat"
-        formControlName="passwordRepeat"
+        id="tlf"
+        formControlName="tlf"
       />
       <div
         *ngIf="
-          !userRegisterForm.get('passwordRepeat')?.valid &&
-          (userRegisterForm.get('passwordRepeat')?.dirty || submitted)
+          !userRegisterForm.get('tlf')?.valid &&
+          (userRegisterForm.get('tlf')?.dirty || submitted)
         "
       >
-        Tu contraseña no coincide.
+        Tu número no es valido.
       </div>
     </fieldset>
 

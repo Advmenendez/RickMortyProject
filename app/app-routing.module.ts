@@ -22,10 +22,7 @@ const routes: Routes = [
     path: `about`, loadChildren: () =>
       import('./pages/about/about.module').then(m => m.AboutModule)
   },
-  {
-    path: `characters/:id`, loadChildren: () =>
-      import('./pages/characters/characters.module').then(m => m.CharactersModule)
-  },
+ 
   { path: ``, redirectTo: `home`, pathMatch: `full` }
 ];
 
