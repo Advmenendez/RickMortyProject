@@ -40,3 +40,16 @@
         }
     }
 }
+.block-container{
+    display: flex;
+    button{
+    
+        width: 80%;
+        max-width: 150px;
+        margin: 60px auto;
+        padding: 15px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 12px;
+    }
+}

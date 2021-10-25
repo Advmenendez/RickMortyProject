@@ -31,6 +31,7 @@ export class AppComponent {
       name: "about",
       link: "/about"
     },
+    
   ];
   public footer: Footer = {
     title: 'Síguenos en @Rick&Morty',

@@ -9,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GalleryComponent implements OnInit {
   characterList: Character[] = [];
+  public index = 1;
+  public filter!: string;
 
   constructor(private request:HttpClient) { 
     this.request.get<any>('https://rickandmortyapi.com/api/character').subscribe(param => {
@@ -17,6 +19,18 @@ export class GalleryComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+  nextPage() {
+    this.index = this.index + 1
+    this.request.get<any>(`https://rickandmortyapi.com/api/character?page=${this.index}`).subscribe(finalResults => {
+      this.characterList = finalResults.results
+    })
+  }
+  previousPage() {
+    this.index = this.index - 1
+    this.request.get<any>(`https://rickandmortyapi.com/api/character?page=${this.index}`).subscribe(finalResults => {
+      this.characterList = finalResults.results
+    })
   }
 
 }
